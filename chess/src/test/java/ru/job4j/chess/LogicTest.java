@@ -4,9 +4,6 @@ import org.junit.Test;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.black.BishopBlack;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
-
 public class LogicTest {
 
     @Test
@@ -33,6 +30,5 @@ public class LogicTest {
         logic.add(new BishopBlack(Cell.B7));
         logic.move(Cell.C8, Cell.A6);
     }
-
 
 }
