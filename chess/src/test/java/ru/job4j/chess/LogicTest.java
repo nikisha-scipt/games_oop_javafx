@@ -23,12 +23,18 @@ public class LogicTest {
         logic.move(Cell.C8, Cell.A6);
     }
 
-    @Test()
+    @Test
     public void freeMoveImpossibleMoveException()
             throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.C1));
         logic.move(Cell.C1, Cell.C7);
+    }
+
+    @Test(expected = ImpossibleMoveException.class)
+    public void whenWayBishopBlack() {
+        BishopBlack black = new BishopBlack(Cell.A1);
+        black.way(Cell.A2);
     }
 
 }
