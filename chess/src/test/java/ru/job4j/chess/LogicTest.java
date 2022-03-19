@@ -14,7 +14,7 @@ public class LogicTest {
         logic.move(Cell.C8, Cell.A6);
     }
 
-    @Test()
+    @Test(expected = OccupiedCellException.class)
     public void whenWrongMove()
             throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
