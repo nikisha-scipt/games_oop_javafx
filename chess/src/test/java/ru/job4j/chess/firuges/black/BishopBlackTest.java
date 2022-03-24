@@ -18,9 +18,15 @@ public class BishopBlackTest {
     }
 
     @Test()
-    public void whenWayBishopBlackA3toB4() {
+    public void whenAllWayForBishopBlackWithPosition() {
         BishopBlack black = new BishopBlack(Cell.A3);
-        black.way(Cell.B4);
+        Cell[] cells = new Cell[] {
+                Cell.B4,
+                Cell.C5,
+                Cell.D6,
+                Cell.E7
+        };
+        assertThat(black.way(Cell.B4), is(cells));
     }
 
     @Test
